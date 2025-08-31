@@ -9,7 +9,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/itsmrpin2/ab/tree/master/backend/config-server   # Git repo holding config files
+          uri: https://github.com/itsmrpin2/ab/tree/master/backend/config-server # Git repo holding config files
+          username: ${itsmrpin2}
+          password: ${ue3NGF@jwHCY@Bd}
           clone-on-start: true
           default-label: master  # branch
 
