@@ -1,1 +1,118 @@
-sdfjsldfjls 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ab</groupId>
+    <artifactId>backend</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>ab-backend</name>
+    <description>Backend microservices for ab ecommerce platform</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.5</version>
+        <relativePath />
+    </parent>
+
+    <properties>
+        <java.version>17</java.version>
+        <spring-cloud.version>2025.0.0</spring-cloud.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring Cloud BOM -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Additional Dependencies
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>42.7.3</version>
+            </dependency> -->
+
+            <!-- Actuator for health checks & monitoring -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+            </dependency>
+
+            <!-- Tests -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Spring Boot Plugin -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+
+                <!-- Jib for Docker (Better than Spotify)
+                <plugin>
+                    <groupId>com.google.cloud.tools</groupId>
+                    <artifactId>jib-maven-plugin</artifactId>
+                    <version>3.4.3</version>
+                </plugin> -->
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <modules>
+        <module>api-gateway</module>
+        <module>eureka-server</module>
+        <!--<module>config-server</module>
+        
+        <module>shared-lib</module>
+
+        <module>auth-service</module>
+        <module>user-service</module>
+        <module>vendor-service</module>
+        <module>product-service</module>
+        <module>catalog-service</module>
+        <module>inventory-service</module>
+        <module>cart-service</module>
+        <module>order-service</module>
+        <module>payment-service</module>
+        <module>shipping-service</module>
+        <module>search-service</module>
+
+        <module>analytics-service</module>
+        <module>audit-service</module>
+        <module>data-warehouse-service</module>
+        <module>reporting-service</module>
+
+        <module>review-service</module>
+        <module>review-moderation-service</module>
+        <module>wishlist-service</module>
+        <module>loyalty-service</module>
+        <module>coupon-service</module>
+        <module>affiliate-service</module>
+        <module>subscription-service</module>
+        <module>identity-service</module>
+        <module>multi-currency-service</module>
+        <module>fraud-detection-service</module>
+        <module>delivery-partner-service</module>
+        <module>personalization-service</module>
+        <module>recommendation-service</module>
+        <module>ad-service</module> -->
+    </modules>
+
+</project>
