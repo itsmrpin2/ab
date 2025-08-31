@@ -8,7 +8,7 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>ab-backend</name>
-    <description>Backend microservices for ab ecommerce platform</description>
+    <description>Backend microservices for AB ecommerce platform</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -39,6 +39,19 @@
                 <artifactId>postgresql</artifactId>
                 <version>42.7.3</version>
             </dependency> -->
+
+            <!-- MySQL Driver (version only, children will inherit) -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>8.4.0</version>
+            </dependency>
+
+            <!-- Spring Boot Web (needed for Eureka Dashboard) -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
 
             <!-- Actuator for health checks & monitoring -->
             <dependency>

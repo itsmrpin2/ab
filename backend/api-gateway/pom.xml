@@ -13,7 +13,7 @@
 
     <artifactId>api-gateway</artifactId>
     <name>API Gateway</name>
-    <description>API Gateway for ab E-commerce Platform</description>
+    <description>API Gateway for AB E-commerce Platform</description>
 
     <dependencies>
         <!-- Spring Cloud Gateway -->
