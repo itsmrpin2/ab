@@ -13,7 +13,7 @@
 
 	<artifactId>eureka-server</artifactId>
 	<name>eureka-server</name>
-	<description>Eureka Service Registry for ab platform</description>
+	<description>Eureka Service Registry for AB platform</description>
 
 	<dependencies>
 		<!-- Eureka Server -->
